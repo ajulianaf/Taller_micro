@@ -1,0 +1,8 @@
+##Prueba del microservicio#
+GET http://127.0.0.1:3000/
+Content-Type: application/json
+
+
+### Lista contactos#
+GET http://127.0.0.1:3000/contactos
+Content-Type: application/json
