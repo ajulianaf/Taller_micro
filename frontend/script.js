@@ -29,7 +29,7 @@ function cargarTablaTareas() {
 
 function mostrarError(mensaje) {
     const errorContainer = document.getElementById("error-container");
-    errorContainer.innerHTML = <p>Algo salió mal al cargar las tareas. Por favor, intenta nuevamente más tarde.</p>;
+    errorContainer.innerHTML = `<p>Algo salió mal al cargar las tareas. Por favor, intente más tarde.</p>`;
 }
 
 consultarTareas();

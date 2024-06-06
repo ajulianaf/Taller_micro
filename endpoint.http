@@ -1,8 +1,63 @@
 ##Prueba del microservicio#
-GET http://127.0.0.1:3000/
+GET http://127.0.0.1:8000/
 Content-Type: application/json
 
 
-### Lista contactos#
-GET http://127.0.0.1:3000/contactos
+### Lista tareas#
+GET http://127.0.0.1:8000/tareas
+Content-Type: application/json
+
+
+### estados 
+PUT  http://127.0.0.1:8000/estados/1
+Content-Type: application/json
+
+{
+    "idEstado": 1   
+}
+
+### reasignar
+PUT http://127.0.0.1:8000/reasignar/1
+Content-Type: application/json
+
+{
+    "idEmpleado": 1
+}
+
+###store
+POST http://127.0.0.1:8000/tareas
+Content-Type: application/json
+
+{
+    "titulo": "test",
+    "descripcion": "test",
+    "fechaEstimadaFinalizacion": "2024-05-29",
+    "fechaFinalizacion": "2024-06-29",
+    "creadorTarea": "test",
+    "observaciones": "test",
+    "idEmpleado": 1,
+    "idEstado": 1,
+    "idPrioridad": 1,
+    "created_at":"2024-12-31 23:59:59", 
+    "updated_at": "2025-01-1 23:59:59"
+}
+
+###update
+PUT http://127.0.0.1:8000/tareas/1
+Content-Type: application/json
+
+{
+    "titulo": "test2",
+    "descripcion": "test2",
+    "fechaEstimadaFinalizacion": "2025-15-29",
+    "fechaFinalizacion": "2025-17-29",
+    "creadorTarea": "test2",
+    "observaciones": "test2"
+}
+
+###delete 
+DELETE http://127.0.0.1:8000/tareas/1
+
+###filtro
+GET http://127.0.0.1:8000/tareas/filter
 Content-Type: application/json

@@ -19,7 +19,7 @@ body {
     text-align: center;
     color: #333;
   }
-  
+
   #error-container {
     background-color: #f8d7da;
     color: #721c24;
@@ -58,7 +58,6 @@ body {
     text-align: left;
     border-bottom: 1px solid #ddd;
   }
-  
   table th {
     background-color: #007bff;
     color: #fff;
@@ -67,7 +66,8 @@ body {
   table tbody tr:nth-child(even) {
     background-color: #f2f2f2;
   }
-  
-  table tbody tr:hover {
+
+
+table tbody tr:hover {
     background-color: #ddd;
   }
