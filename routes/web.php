@@ -1,7 +1,7 @@
 <?php
 
 /** @var \Laravel\Lumen\Routing\Router $router */
-
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -14,7 +14,14 @@
 */
 
 $router->get('/', function () use ($router) {
+ 
     return $router->app->version();
 });
 
+$router -> put ('/estados/{id}', 'TareaController@estado');
 $router -> get('/tareas', 'TareaController@index');
+$router -> get ('/tareas/filter', 'TareaController@filter');
+$router -> put ('/reasignar/{id}', 'TareaController@reasignar');
+$router -> post('/tareas', 'TareaController@store');
+$router -> put('/tareas/{id}', 'TareaController@update');
+$router -> delete('/tareas/{id}', 'TareaController@destroy');
